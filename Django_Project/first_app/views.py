@@ -4,4 +4,5 @@ from django.http import HttpResponse
 
 
 def index(request):
-    return HttpResponse("First Django Response")
+    my_test_dictionary = {"insert_text": "I am a piece of text plz dun h8 meh"}
+    return render(request, 'index.html', context=my_test_dictionary)
